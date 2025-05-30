@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Course - Web Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section for JavaScript Course -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">JavaScript Course</h1>
+            <p class="hero-subtitle">Dive into the world of dynamic web development with JavaScript.</p>
+            <button class="cta-button" onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/500x300" alt="JavaScript Coding Illustration" class="floating">
+        </div>
+    </section>
+
+    <!-- Course Content Section -->
+    <section id="course-content" class="section">
+        <h2 class="section-title">Course Overview</h2>
+        <p class="course-description">
+            This JavaScript course is designed to teach you the fundamentals of the JavaScript programming language. You'll learn how to write dynamic and interactive web applications, manipulate the DOM, and handle user events. By the end of this course, you'll be able to create engaging and responsive web experiences.
+        </p>
+
+        <!-- Basics Section -->
+        <section class="section">
+            <h2 class="section-title">JavaScript Basics</h2>
+            <div class="content">
+                <h3>1. Introduction to JavaScript</h3>
+                <p>JavaScript is a high-level, interpreted programming language that is primarily used for web development. It is one of the core technologies of the World Wide Web, along with HTML and CSS.</p>
+
+                <h3>2. Variables and Data Types</h3>
+                <p>In JavaScript, you can declare variables using the `var`, `let`, or `const` keywords. JavaScript has several data types, including numbers, strings, booleans, and objects.</p>
+                <pre><code>let name = "John Doe";
+const age = 30;
+let isStudent = true;</code></pre>
+
+                <h3>3. Operators and Expressions</h3>
+                <p>JavaScript supports various operators, such as arithmetic, assignment, comparison, and logical operators. Expressions are combinations of values, variables, and operators that evaluate to a single value.</p>
+                <pre><code>let sum = 5 + 3;
+let isAdult = age >= 18;
+let message = "Hello, " + name + "!";</code></pre>
+
+                <h3>4. Control Flow and Conditional Statements</h3>
+                <p>JavaScript uses control flow structures like `if-else` statements, `switch` statements, and loops (such as `for`, `while`, and `do-while`) to control the execution of code.</p>
+                <pre><code>if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Functions Section -->
+        <section class="section">
+            <h2 class="section-title">Functions</h2>
+            <div class="content">
+                <h3>1. Function Declarations and Expressions</h3>
+                <p>Functions in JavaScript can be declared using the `function` keyword or assigned to a variable as a function expression.</p>
+                <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+const calculateArea = function(width, height) {
+    return width * height;
+};</code></pre>
+
+                <h3>2. Arrow Functions</h3>
+                <p>ES6 (ECMAScript 2015) introduced a new syntax for defining functions called arrow functions, which provide a more concise way to write functions.</p>
+                <pre><code>const greet = (name) => {
+    return "Hello, " + name + "!";
+};
+
+const calculateArea = (width, height) => width * height;</code></pre>
+
+                <h3>3. Scope and Closures</h3>
+                <p>JavaScript has function scope, block scope, and global scope. Closures are a powerful feature that allow functions to access variables from an outer function, even after the outer function has finished executing.</p>
+                <pre><code>function outerFunction() {
+    const x = 5;
+
+    function innerFunction() {
+        const y = 10;
+        console.log(x + y); // Can access x from the outer function
+    }
+
+    return innerFunction;
+}
+
+const myInnerFunction = outerFunction();
+myInnerFunction(); // Output: 15</code></pre>
+            </div>
+        </section>
+
+        <!-- DOM Manipulation Section -->
+        <section class="section">
+            <h2 class="section-title">DOM Manipulation</h2>
+            <div class="content">
+                <h3>1. Selecting and Accessing DOM Elements</h3>
+                <p>JavaScript allows you to select and access elements in the Document Object Model (DOM) using methods like `document.getElementById()`, `document.querySelector()`, and `document.querySelectorAll()`.</p>
+                <pre><code>const heading = document.getElementById("main-heading");
+const paragraphs = document.querySelectorAll("p");
+const firstParagraph = document.querySelector("p");</code></pre>
+
+                <h3>2. Modifying DOM Elements</h3>
+                <p>Once you have selected DOM elements, you can manipulate their properties, such as `textContent`, `innerHTML`, `style`, and more.</p>
+                <pre><code>heading.textContent = "New Heading";
+paragraphs[0].style.color = "red";
+firstParagraph.innerHTML = "&lt;em&gt;This is a paragraph&lt;/em&gt;";</code></pre>
+
+                <h3>3. Event Handling</h3>
+                <p>JavaScript enables you to listen for and respond to user events, such as clicks, mouse movements, and key presses, using event listeners and event handlers.</p>
+                <pre><code>const button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+            </div>
+        </section>
+
+        <!-- Asynchronous JavaScript Section -->
+        <section class="section">
+            <h2 class="section-title">Asynchronous JavaScript</h2>
+            <div class="content">
+                <h3>1. Callbacks</h3>
+                <p>Callbacks are functions that are passed as arguments to other functions and are called when a certain event occurs or a certain task is completed.</p>
+                <pre><code>function fetchData(callback) {
+    // Simulate asynchronous data fetching
+    setTimeout(function() {
+        const data = "Fetched data";
+        callback(data);
+    }, 2000);
+}
+
+fetchData(function(data) {
+    console.log(data);
+});</code></pre>
+
+                <h3>2. Promises</h3>
+                <p>Promises provide a more structured way to handle asynchronous operations. They represent the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+                <pre><code>function fetchData() {
+    return new Promise((resolve, reject) => {
+        // Simulate asynchronous data fetching
+        setTimeout(() => {
+            const data = "Fetched data";
+            resolve(data);
+        }, 2000);
+    });
+}
+
+fetchData()
+    .then(data => console.log(data))
+    .catch(error => console.error(error));</code></pre>
+
+                <h3>3. Async/Await</h3>
+                <p>Async/await is a syntactical sugar on top of promises, making asynchronous code easier to write and read. The `async` keyword is used to define an asynchronous function, and the `await` keyword is used to wait for a promise to resolve.</p>
+                <pre><code>async function fetchData() {
+    try {
+        const response = await fetch("https://api.example.com/data");
+        const data = await response.text();
+        console.log(data);
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+
+fetchData();</code></pre>
+            </div>
+        </section>
+
+        <!-- Modern JavaScript Features Section -->
+        <section class="section">
+            <h2 class="section-title">Modern JavaScript Features</h2>
+            <div class="content">
+                <h3>1. ES6 (ECMAScript 2015)</h3>
+                <p>ES6 introduced many new features to JavaScript, such as `let` and `const` for improved variable declarations, arrow functions, classes, modules, and more.</p>
+                <pre><code>// ES6 Arrow Function
+const square = (x) => x * x;
+
+// ES6 Class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name}.`);
+    }
+}
+
+const john = new Person("John", 30);
+john.greet();</code></pre>
+
+                <h3>2. Destructuring</h3>
+                <p>Destructuring is a way to extract values from arrays or properties from objects and assign them to variables in a more concise way.</p>
+                <pre><code>const person = { name: "John", age: 30 };
+const { name, age } = person;
+console.log(name); // Output: "John"
+console.log(age); // Output: 30
+
+const numbers = [1, 2, 3];
+const [first, second] = numbers;
+console.log(first); // Output: 1
+console.log(second); // Output: 2</code></pre>
+
+                <h3>3. Modules</h3>
+                <p>Modules in JavaScript allow you to organize your code into reusable and maintainable units. They help manage dependencies and promote encapsulation.</p>
+                <pre><code>// math.js
+export const add = (a, b) => a + b;
+export const subtract = (a, b) => a - b;
+
+// app.js
+import { add, subtract } from './math.js';
+
+console.log(add(2, 3)); // Output: 5
+console.log(subtract(5, 3)); // Output: 2</code></pre>
+
+                <h3>4. Spread and Rest Operators</h3>
+                <p>The spread operator (`...`) allows you to spread the elements of an array or the properties of an object. The rest operator (`...`) collects multiple elements into an array.</p>
+                <pre><code>// Spread Operator
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4, 5];
+console.log(newNumbers); // Output: [1, 2, 3, 4, 5]
+
+// Rest Operator
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sum(1, 2, 3)); // Output: 6</code></pre>
+            </div>
+        </section>
+
+        <!-- Practical Examples Section -->
+        <section class="section">
+            <h2 class="section-title">Practical Examples</h2>
+            <div class="content">
+                <h3>1. DOM Manipulation: Changing the Background Color</h3>
+                <p>This example demonstrates how to use JavaScript to change the background color of a web page when a button is clicked.</p>
+                <button id="changeColorBtn" class="cta-button">Change Background Color</button>
+
+                <h3>2. Asynchronous JavaScript: Fetching Data from an API</h3>
+                <p>This example demonstrates how to use the Fetch API to fetch data from a remote API and display it on the page.</p>
+                <button id="fetchDataBtn" class="cta-button">Fetch Data</button>
+                <div id="dataContainer"></div>
+
+                <h3>3. Event Handling: Keyboard-controlled Movement</h3>
+                <p>This example demonstrates how to use JavaScript to control the movement of an element on the page using keyboard events.</p>
+                <div id="movableElement" style="width: 100px; height: 100px; background-color: var(--primary-color); position: absolute;"></div>
+
+                <h3>4. Form Validation</h3>
+                <p>This example demonstrates how to use JavaScript to validate a form before submission.</p>
+                <form id="myForm">
+                    <label>Name: <input type="text" id="nameInput" required></label>
+                    <label>Email: <input type="email" id="emailInput" required></label>
+                    <button type="submit" class="cta-button">Submit</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CodeMaster. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
